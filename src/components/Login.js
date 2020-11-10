@@ -19,7 +19,7 @@ function Login() {
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
       setMessage("Check your inbox for further instructions");
-      history.push('/')
+      history.push("/");
     } catch {
       setError("Failed to log in");
     }
@@ -51,7 +51,7 @@ function Login() {
           </div>
         </Card.Body>
       </Card>
-      <div className="w-100 text-center mt-2">
+      <div className="w-100 text-center mt-2 text-white">
         Need an account'? <Link to="/signup">Sign Up</Link>
       </div>
     </>
