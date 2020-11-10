@@ -1,4 +1,6 @@
 body {
+  background-image: url('./images/photo-1492228612174-7bd78299c65e.jpg');
+  background-size: cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
