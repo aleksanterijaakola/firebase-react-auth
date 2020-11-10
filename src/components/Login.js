@@ -9,7 +9,6 @@ function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
-  const [message, setMessage] = useState("");
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -18,7 +17,6 @@ function Login() {
       setError("");
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
-      setMessage("Check your inbox for further instructions");
       history.push("/");
     } catch {
       setError("Failed to log in");
@@ -32,7 +30,6 @@ function Login() {
           <h2 className="text-center mb-4">Log In </h2>
           {/* {currentUser.email} */}
           {error && <Alert variant="danger">{error}</Alert>}
-          {message && <Alert variant="success">{message}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
@@ -52,7 +49,7 @@ function Login() {
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2 text-white">
-        Need an account'? <Link to="/signup">Sign Up</Link>
+        Need an account? <Link to="/signup">Sign Up</Link>
       </div>
     </>
   );
